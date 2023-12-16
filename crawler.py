@@ -11,8 +11,8 @@ import os
 HTTP_URL_PATTERN = r'^http[s]*://.+'
 
 # Hardcoded - Change to websiteList data
-domain = "books.toscrape.com" # <- put your domain to be crawled
-full_url = "https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html" # <- put your domain to be crawled with https or http
+domain = "https://my-portfolio-rosy-chi-70.vercel.app/" # <- put your domain to be crawled
+full_url = "https://my-portfolio-rosy-chi-70.vercel.app/about" # <- put your domain to be crawled with https or http
 
 # Create a class to parse the HTML and get the hyperlinks
 class HyperlinkParser(HTMLParser):
