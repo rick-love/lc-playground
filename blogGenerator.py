@@ -1,4 +1,4 @@
-from config import get_api_key
+from config import get_OpenAI
 from openai import OpenAI
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -13,7 +13,7 @@ import streamlit as st
 
 # Set the API key for OpenAI
 try:
-    OpenAI.api_key = get_api_key()
+    OpenAI.api_key = get_OpenAI()
 except Exception as e:
     raise Exception(f"Error setting API key for OpenAI: {e}")
 
@@ -26,14 +26,14 @@ blog_title_memory = ConversationBufferMemory(input_key='topic', memory_key='chat
 blog_subject_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
 
 # Prompt Templates
-prompt = st.text_input('Plug in your prompt here:')
+prompt = st.text_input('Enter your topic:')
 blog_title_template = PromptTemplate(
     input_variables=['topic'],
     template='Write a Blog title about {topic}'
 )
 blog_subject_templte = PromptTemplate(
     input_variables=['title', 'wikipedia_research'],
-    template='Write a Blog article based on this title: {title} while also leveraging this wikipedia research: {wikipedia_research}'
+    template='Write a Blog article based on this title: {title} while also leveraging this wikipedia research: {wikipedia_research}. The article should be less 500 words long.'
 )
 
 title_chain= LLMChain(llm=llm, prompt=blog_title_template, output_key='title', memory=blog_title_memory)
