@@ -1,4 +1,4 @@
-from config import get_api_key
+from OpenAI_Training.config import get_api_key
 from openai import OpenAI
 from langchain.prompts import FewShotPromptTemplate,PromptTemplate
 from langchain.llms import OpenAI

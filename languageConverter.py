@@ -1,7 +1,7 @@
 from langchain.llms import OpenAI
 import streamlit as st
 from config import get_OpenAI
-from langchain import PromptTemplate
+from langchain.prompts import PromptTemplate
 
 template = """
 Below is a text message that maybe poorly written.

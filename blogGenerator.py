@@ -1,4 +1,4 @@
-from config import get_OpenAI
+from OpenAI_Training.config import get_OpenAI
 from openai import OpenAI
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate

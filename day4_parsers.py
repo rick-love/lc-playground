@@ -1,4 +1,4 @@
-from config import get_OpenAI
+from OpenAI_Training.config import get_OpenAI
 from openai import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate

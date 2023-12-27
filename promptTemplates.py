@@ -1,4 +1,4 @@
-from config import get_OpenAI, get_PineCone
+from OpenAI_Training.config import get_OpenAI, get_PineCone
 from openai import OpenAI
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI

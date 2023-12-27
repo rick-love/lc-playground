@@ -1,5 +1,5 @@
 from pathlib import Path
-from config import get_api_key
+from OpenAI_Training.config import get_api_key
 from openai import OpenAI
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI

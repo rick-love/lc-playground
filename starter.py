@@ -16,8 +16,11 @@ except Exception as e:
 
 
 # LLMs
-llm = OpenAI(temperature=0.9, model_name="gpt-4-1106-preview")
-chat_model = ChatOpenAI(temperature=.7)
+llm = OpenAI(temperature=0, model_name="gpt-3.5-turbo-1106")
+chat_model = ChatOpenAI(temperature=0) # temperature=0.7 is default
+
+
+
 
 ############
 # Show to the screen
